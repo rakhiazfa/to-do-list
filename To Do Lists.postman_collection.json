@@ -1,0 +1,473 @@
+{
+	"info": {
+		"_postman_id": "b7f751c4-165f-430e-b7d8-51999b2e03b0",
+		"name": "To Do Lists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15318880",
+		"_collection_link": "https://www.postman.com/red-flare-997181/workspace/coding-test/collection/15318880-b7f751c4-165f-430e-b7d8-51999b2e03b0?action=share&source=collection_link&creator=15318880"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Galih\",\r\n    \"email\": \"galih@to-do-list.co.id\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/auth/signup",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"galih@to-do-list.co.id\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/auth/signin",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Out",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/auth/signout",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/auth/refresh-token",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/auth/user",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Checklist",
+			"item": [
+				{
+					"name": "Fetch Checklists",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/checklists",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"checklists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Checklist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rencana Bulan Juni\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/checklists",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"checklists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Checklist By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/checklists/f05c7aed-1da5-4998-a5a3-3c4c4a39434a",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"checklists",
+								"f05c7aed-1da5-4998-a5a3-3c4c4a39434a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Checklist",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/checklists/d71b3a65-1e76-47be-bc92-44633463a69f",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"checklists",
+								"d71b3a65-1e76-47be-bc92-44633463a69f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Fetch Todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/checklists/f05c7aed-1da5-4998-a5a3-3c4c4a39434a/todos",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"checklists",
+								"f05c7aed-1da5-4998-a5a3-3c4c4a39434a",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Todo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Masak Ikan\",\r\n    \"description\": \"Memasak Ikan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/checklists/f05c7aed-1da5-4998-a5a3-3c4c4a39434a/todos",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"checklists",
+								"f05c7aed-1da5-4998-a5a3-3c4c4a39434a",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Todo By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/checklists/f05c7aed-1da5-4998-a5a3-3c4c4a39434a/todos/5a028ae2-7b26-4456-b7bb-33431724a183",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"checklists",
+								"f05c7aed-1da5-4998-a5a3-3c4c4a39434a",
+								"todos",
+								"5a028ae2-7b26-4456-b7bb-33431724a183"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Todo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Masak Sayur\",\r\n    \"description\": \"Memasak Sayur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/checklists/f05c7aed-1da5-4998-a5a3-3c4c4a39434a/todos/20fa3052-4137-4334-bbc6-354b6c68c626",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"checklists",
+								"f05c7aed-1da5-4998-a5a3-3c4c4a39434a",
+								"todos",
+								"20fa3052-4137-4334-bbc6-354b6c68c626"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Todo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/checklists/f05c7aed-1da5-4998-a5a3-3c4c4a39434a/todos/20fa3052-4137-4334-bbc6-354b6c68c626",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"checklists",
+								"f05c7aed-1da5-4998-a5a3-3c4c4a39434a",
+								"todos",
+								"20fa3052-4137-4334-bbc6-354b6c68c626"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle Status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/checklists/f05c7aed-1da5-4998-a5a3-3c4c4a39434a/todos/5a028ae2-7b26-4456-b7bb-33431724a183/toggle-status",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"checklists",
+								"f05c7aed-1da5-4998-a5a3-3c4c4a39434a",
+								"todos",
+								"5a028ae2-7b26-4456-b7bb-33431724a183",
+								"toggle-status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlMzUwOTMyLWJiMjMtNGMzMy04NTM5LThjNTY2MmM5YmEwYyIsIm5hbWUiOiJHYWxpaCIsImVtYWlsIjoiZ2FsaWhAdG8tZG8tbGlzdC5jby5pZCIsImNyZWF0ZWRfYXQiOiIyMDI0LTA2LTA1VDA4OjQzOjAxLjMwOFoiLCJ1cGRhdGVkX2F0IjoiMjAyNC0wNi0wNVQwODo0MzoxMy42MDhaIiwiaWF0IjoxNzE3NTc4MTM1LCJleHAiOjE3MTc1NzkwMzV9.nKzCvEpUmxlpetJcbGHiktZ377c-sVL4RGxZZPwEo4k",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}
