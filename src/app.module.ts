@@ -5,6 +5,7 @@ import { PrismaModule } from './common/providers/prisma/prisma.module';
 import { UsersModule } from './modules/users/users.module';
 import { JwtModule } from '@nestjs/jwt';
 import { IsUnique } from './common/validators/is-unique';
+import { ChecklistsModule } from './modules/checklists/checklists.module';
 
 @Module({
     imports: [
@@ -13,6 +14,7 @@ import { IsUnique } from './common/validators/is-unique';
         AuthModule,
         PrismaModule,
         UsersModule,
+        ChecklistsModule,
     ],
     providers: [IsUnique],
 })
