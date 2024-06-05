@@ -40,7 +40,9 @@ model Checklist {
 
 model Todo {
   id            String    @id @default(uuid())
-  name          String
+  title         String
+  description   String    @db.Text()
+  is_finished   Boolean
   checklist_id  String
   checklist     Checklist @relation(fields: [checklist_id], references: [id])
   created_at    DateTime  @default(now())
