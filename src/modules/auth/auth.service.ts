@@ -138,7 +138,7 @@ export class AuthService {
 
     async createAccessToken(
         payload: object | Buffer,
-        expiresIn: string | null = '5m',
+        expiresIn: string | null = '15m',
     ): Promise<string> {
         const token = await this.jwtService.signAsync(payload, {
             secret: this.configService.get<string>('ACCESS_TOKEN_SECRET_KEY'),
